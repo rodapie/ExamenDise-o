@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+</head>
+<body>
+    <main class="vw-100 vh-100 d-flex justify-content-center align-items-center " >
+        
+        <div id="map" class="w-100 h-100 border-secondary  overflow-hidden" ></div>
+    
+        
+        
+        <div class="h-100 col-3 p-1 overflow-auto">
+          <!-- <button class="btn bg-success" id="b">Añadir mi posición</button> -->
+          <ul id ="contenido" class="list-group mt-3 ">
+            <template> 
+              <li id = lista class="rojo list-group-item p-3 border-secondary " title="texto">
+                <button class= "list-group-item p-3 border-white"id="" data-toggle="modal" data-target="#id">                
+                <h3></h3>
+                <p></p>
+                <table>
+                  <th>
+                    <p ><span id="direccion" class="badge bg-primary "></span></p>
+                  </th>
+                  <th>
+                    <p ><span id="telefono" class="badge bg-primary "></span></p>
+                  </th>
+                </table>
+                </button>
+            </li>
+            </template>
+          </ul>    
+        </div>
+      </main>
+      <div class="modal" id="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <br>
+            <div class="modal-body">
+              <p id = ModalDir></p>
+              <p id = ModalHora></p>
+              <p id = ModalTel></p>
+            </div>
+            <br>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+       <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+ integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+ crossorigin=""></script>
+ <script src="js/apps.js"></script>
+</body>
+</html>
